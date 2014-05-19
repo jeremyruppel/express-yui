@@ -58,6 +58,7 @@ suite.add(new YUITest.TestCase({
 
         A.isObject(app, 'static() should return an express app to be mounted');
         A.isFunction(app.use, 'static() should return an express app with `use()` method');
+        A.isFalse(app.enabled('x-powered-by'), 'static() should return an express app with `x-powered-by` disabled');
     },
 
     "test exposeSeed": function () {
